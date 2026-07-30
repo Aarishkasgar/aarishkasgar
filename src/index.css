@@ -2,7 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: #0f172a; /* Dark theme background */
-  color: #f8fafc; /* Light text */
+/* Cyber-Pop Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050811;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #06b6d4, #8b5cf6, #ec4899);
+  border-radius: 9999px;
+  border: 2px solid #050811;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #22d3ee, #a855f7, #f472b6);
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #050811;
+  color: #e2e8f0;
+}
+
+/* 3D Toy Element Hover Glow Utility */
+.toy-card-glow {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.toy-card-glow:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px -15px rgba(6, 182, 212, 0.25),
+              0 0 20px -5px rgba(236, 72, 153, 0.2);
 }
